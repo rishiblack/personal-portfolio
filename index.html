@@ -292,16 +292,48 @@
 </head>
 <body>
   <nav>
-  <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
-    <a href="#home" class="nav-link"><i class="fas fa-home"></i><span>Home</span></a>
-    <a href="#about" class="nav-link"><i class="fas fa-user"></i><span>About</span></a>
-    <a href="#skills" class="nav-link"><i class="fas fa-laptop-code"></i><span>Skills</span></a>
-    <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a>
-  </div>
-  <div style="margin-left: auto;">
-    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <div class="nav-container">
+    <a href="#home" class="nav-logo"><i class="fas fa-user-secret"></i></a>
+    <div class="nav-links">
+      <a href="#home" class="nav-link"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="#about" class="nav-link"><i class="fas fa-user"></i><span>About</span></a>
+      <a href="#skills" class="nav-link"><i class="fas fa-laptop-code"></i><span>Skills</span></a>
+      <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a>
+    </div>
+    <div style="margin-left: auto;">
+      <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    </div>
   </div>
 </nav>
+<style>
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .nav-logo {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-right: 1rem;
+  }
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+  }
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+    .typewriter {
+      white-space: normal;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      padding: 0 1rem;
+    }
+  }
+</style>
 <style>
   nav a.nav-link {
     display: flex;

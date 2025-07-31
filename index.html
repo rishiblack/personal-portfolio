@@ -127,9 +127,7 @@
       }
     }
 
-    .glitch {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 3rem;
+    $1 4.5rem$3
       color: var(--primary-color);
       animation: glitch 2s infinite;
     }
@@ -181,9 +179,7 @@
       width: 100%;
     }
 
-    @media screen and (max-width: 768px) {
-      .glitch {
-        font-size: 2rem;
+    $1 3rem$3
       }
       .typewriter {
         font-size: 1rem;
@@ -191,6 +187,33 @@
       nav {
         flex-direction: column;
         align-items: flex-start;
+      }
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      .typewriter {
+        font-size: 1rem;
+      }
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      section {
+        padding: 2rem 1rem;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      form input, form textarea, form button {
+        font-size: 1rem;
+      }
+      #user-question {
+        font-size: 1rem;
+      }
+      .theme-toggle {
+        width: 100%;
       }
     }
   </style>
@@ -207,14 +230,16 @@
   </nav>
 
   <header id="home">
-    <h1 class="glitch">Rishi Black</h1>
+    <h1 class="glitch" style="font-size: 6rem; letter-spacing: 2px; text-shadow: 0 0 20px var(--primary-color);">Rishi Black</h1>
     <p class="typewriter">Cybersecurity Enthusiast | Linux Hacker | Python & C++ Programmer</p>
   </header>
 
   <section id="about">
-    <h2>About Me</h2>
-    <p>I’m Rishi, a cybersecurity enthusiast with a deep interest in ethical hacking, Linux systems, and programming. I explore, test, and build secure systems with passion and curiosity.</p>
-  </section>
+  <h2>Who is Rishi Black?</h2>
+  <p>Hello! I'm <strong>Rishi Black</strong>, a cybersecurity warrior with a sharp edge for ethical hacking, Linux operations, and open-source intelligence. I specialize in network analysis, bug bounty hunting, and penetration testing. I enjoy decoding digital threats, building secure infrastructures, and contributing to a safer digital ecosystem.</p>
+  <p>Whether it's securing systems or educating others through blogs and AI tools, I bring energy, strategy, and precision to every digital challenge.</p>
+  
+</section>
 
   <section id="skills" class="grid">
     <div>
@@ -232,14 +257,21 @@
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="4" required></textarea>
-      <button type="submit" class="theme-toggle">Send</button>
-    </form>
-  </section>
+  <h2>Get in Touch</h2>
+  <p>If you’re interested in collaborating, hiring, or just want to talk cybersecurity, drop me a message below or connect via social links!</p>
+  <form action="https://formspree.io/f/mnqelqrl" method="POST" style="margin-top: 1.5rem;">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your Name" required style="padding: 0.7rem; margin-bottom: 1rem; background: var(--input-bg); border: none; color: var(--text-color); border-radius: 4px;">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Your Email" required style="padding: 0.7rem; margin-bottom: 1rem; background: var(--input-bg); border: none; color: var(--text-color); border-radius: 4px;">
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Your Message" rows="5" required style="padding: 0.7rem; background: var(--input-bg); border: none; color: var(--text-color); border-radius: 4px;"></textarea>
+
+    <button type="submit" class="theme-toggle" style="margin-top: 1rem;">Send Message</button>
+  </form>
+</section>
 
   <script>
     function toggleTheme() {
@@ -253,3 +285,86 @@
       }
     }
   </script>
+
+<footer style="background-color: var(--accent-color); padding: 2rem; text-align: center; color: var(--text-color);">
+  <p>Connect with me:</p>
+  <div style="margin-top: 1rem;">
+    <a href="https://github.com/rishiblack" target="_blank" style="color: var(--primary-color); margin: 0 1rem;"><i class="fab fa-github fa-lg"></i></a>
+    <a href="https://linkedin.com/in/rishiblack" target="_blank" style="color: var(--primary-color); margin: 0 1rem;"><i class="fab fa-linkedin fa-lg"></i></a>
+    <a href="https://twitter.com/rishiblack" target="_blank" style="color: var(--primary-color); margin: 0 1rem;"><i class="fab fa-twitter fa-lg"></i></a>
+  </div>
+  <p style="margin-top: 1rem; font-size: 0.9rem;">&copy; 2025 Rishi Black. All rights reserved.</p>
+</footer>
+
+<!-- Blog Section -->
+<section id="blog">
+  <h2>Cybersecurity Insights</h2>
+  <div class="grid">
+    <div>
+      <h3>Linux Basics for Hackers</h3>
+      <p>Explore the foundational concepts of hacking through Linux. Based on the book, this blog covers everything from networking tools to shell scripting and reconnaissance.</p>
+      <a href="#">Read More</a>
+    </div>
+    <div>
+      <h3>Top 5 Bug Bounty Platforms</h3>
+      <p>Discover where hackers are getting paid for ethical hacking. Includes platforms like HackerOne, Bugcrowd, and more.</p>
+      <a href="#">Read More</a>
+    </div>
+    <div>
+      <h3>Setting Up Your First Pentest Lab</h3>
+      <p>A step-by-step guide for beginners to create a safe environment to test skills using VMs, Kali Linux, and tools like Metasploit.</p>
+      <a href="#">Read More</a>
+    </div>
+  </div>
+</section>
+
+<!-- AI Chat Assistant -->
+<section id="rishibot">
+  <h2>Ask RishiBot</h2>
+  <p>Need help with cybersecurity, Linux, or ethical hacking? Chat with RishiBot – your AI assistant powered with foundational knowledge from "Linux Basics for Hackers" and real-world cyber topics.</p>
+  <div style="background-color: var(--accent-color); padding: 1.5rem; border-radius: 10px; max-width: 800px; margin: 2rem auto;">
+    <label for="user-question" style="display: block; margin-bottom: 0.5rem;">Ask a question:</label>
+    <input type="text" id="user-question" placeholder="e.g., How do I scan a network using Nmap?" style="width: 100%; padding: 0.7rem; border-radius: 5px; background: var(--input-bg); color: var(--text-color); border: none;">
+    <button onclick="rishiBotReply()" class="theme-toggle" style="margin-top: 1rem; width: 100%;">Get Answer</button>
+    <div id="rishi-response" style="margin-top: 1rem; background: #111; padding: 1rem; border-radius: 5px; color: var(--text-color); font-size: 0.95rem; min-height: 50px;"></div>
+  </div>
+</section>
+<script>
+  function rishiBotReply() {
+  const question = document.getElementById('user-question').value.toLowerCase();
+  const responseBox = document.getElementById('rishi-response');
+  const responses = {
+    'nmap': 'Nmap is a powerful network scanner. Example: `nmap -sV -A 192.168.1.1` scans with service/version detection and OS fingerprinting.',
+    'linux': 'Linux is a core skill for hackers. Learn to navigate the terminal, use tools like netcat, and write bash scripts.',
+    'hacking': 'Ethical hacking involves scanning, enumeration, exploitation, and reporting. Always use permission-based labs!',
+    'osint': 'OSINT is Open Source Intelligence. Use tools like theHarvester, Maltego, or Google dorks to gather info from public sources.',
+    'burpsuite': 'Burp Suite is used to intercept and test web traffic. Start with intercept on, and explore target scope & repeater.',
+    'tcpdump': 'tcpdump is a packet analyzer. Try `tcpdump -i eth0` to capture traffic from interface eth0.',
+    'whois': 'The whois command helps gather domain/IP ownership info. Example: `whois example.com`.',
+    'kali': 'Kali Linux is a penetration testing distribution packed with tools like Metasploit, Nmap, Hydra, etc.'
+  };
+  let matched = Object.keys(responses).find(keyword => question.includes(keyword));
+  const answer = matched ? responses[matched] : 'Sorry, I couldn’t find an answer. Try asking about Linux, Nmap, OSINT, or BurpSuite.';
+  animateResponse(answer, responseBox);
+}
+
+function animateResponse(text, container) {
+  container.innerHTML = '';
+  let i = 0;
+  const speed = 25;
+  function typeChar() {
+    if (i < text.length) {
+      container.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeChar, speed);
+    }
+  }
+  typeChar();
+};
+    
+</script>
+
+<!-- Animated Skills Chart Placeholder -->
+
+
+

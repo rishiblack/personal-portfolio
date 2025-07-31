@@ -75,6 +75,28 @@
 
 @media (max-width: 768px) {
   nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  nav div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  nav a.nav-link span {
+    font-size: 0.9rem;
+  }
+  .typewriter {
+    font-size: 1rem;
+    line-height: 1.4;
+    white-space: normal;
+    word-break: break-word;
+  }
+  nav {
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem;

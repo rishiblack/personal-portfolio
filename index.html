@@ -74,23 +74,24 @@
 }
 
 @media (max-width: 768px) {
+  .nav-links {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  align-items: center;
+}
   .nav-links a span {
     display: none;
   }
-  .nav-links {
-    display: flex !important;
-    justify-content: space-around;
-    flex: 1;
-  }
   .theme-toggle {
     font-size: 0;
-    padding: 0.5rem;
+    padding: 0.6rem;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .theme-toggle::before {
-    content: '042';
+    content: '186'; /* moon icon */
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     font-size: 1.2rem;

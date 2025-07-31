@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rishi Black | Cybersecurity Enthusiast</title>
   <meta name="description" content="Cybersecurity portfolio of Rishi Black: ethical hacker, Linux enthusiast, and Python/C++ developer. Includes projects, blog, and a smart AI assistant." />
   <meta name="keywords" content="cybersecurity, ethical hacking, Linux, Python, C++, bug bounty, Rishi Black, penetration testing, infosec" />
   <meta name="author" content="Rishi Black" />
+  <meta name="robots" content="index, follow" />
   <meta property="og:title" content="Rishi Black | Cybersecurity Enthusiast" />
   <meta property="og:description" content="Explore my ethical hacking projects, security blogs, and AI-powered cybersecurity assistant." />
   <meta property="og:image" content="https://cdn.pixabay.com/photo/2022/03/15/14/21/hacker-7069916_1280.jpg" />
   <meta property="og:type" content="website" />
-  <meta name="robots" content="index, follow" />
-  <!-- Hacker matrix rain animation -->
-  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rishi Black | Cybersecurity Enthusiast</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Source+Code+Pro:wght@400&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <style>
@@ -71,12 +69,13 @@
       top: 0;
       z-index: 100;
       box-shadow: 0 2px 10px rgba(0, 255, 204, 0.4);
+      flex-wrap: wrap;
     }
 
     nav a {
       color: var(--primary-color);
       text-decoration: none;
-      margin: 0 1rem;
+      margin: 0.5rem 1rem;
       font-weight: bold;
       transition: 0.3s;
     }
@@ -97,7 +96,7 @@
       border-radius: 5px;
       cursor: pointer;
       transition: 0.3s;
-      margin-left: 1rem;
+      margin: 0.5rem 0;
     }
 
     .theme-toggle:hover {
@@ -114,18 +113,7 @@
       align-items: center;
       text-align: center;
       animation: slideIn 1s ease-out;
-      position: relative;
-    }
-
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: repeating-linear-gradient(45deg, rgba(0, 255, 204, 0.02), rgba(0, 255, 204, 0.02) 1px, transparent 1px, transparent 20px);
-      pointer-events: none;
+      padding: 2rem;
     }
 
     @keyframes slideIn {
@@ -141,11 +129,9 @@
 
     .glitch {
       font-family: 'Orbitron', sans-serif;
-      font-size: 4rem;
+      font-size: 3rem;
       color: var(--primary-color);
-      position: relative;
       animation: glitch 2s infinite;
-      z-index: 1;
     }
 
     @keyframes glitch {
@@ -166,8 +152,7 @@
         typing 4s steps(40, end),
         blink-caret .75s step-end infinite;
       color: #aaa;
-      font-size: 1.4rem;
-      z-index: 1;
+      font-size: 1.2rem;
     }
 
     @keyframes typing {
@@ -179,259 +164,36 @@
       from, to { border-color: transparent }
       50% { border-color: var(--primary-color); }
     }
-  .background-slider {
-      position: absolute;
-      top: 0;
-      left: 0;
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    input, textarea {
       width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      opacity: 0.1;
-      z-index: 0;
-      animation: slideBackground 30s infinite ease-in-out;
     }
 
-    @keyframes slideBackground {
-      0% { background-image: url('https://cdn.pixabay.com/photo/2017/02/19/15/26/hacker-2089365_1280.jpg'); }
-      33% { background-image: url('https://cdn.pixabay.com/photo/2020/01/27/20/26/hacker-4795094_1280.jpg'); }
-      66% { background-image: url('https://cdn.pixabay.com/photo/2018/03/10/12/00/monitor-3212932_1280.jpg'); }
-      100% { background-image: url('https://cdn.pixabay.com/photo/2017/02/19/15/26/hacker-2089365_1280.jpg'); }
+    @media screen and (max-width: 768px) {
+      .glitch {
+        font-size: 2rem;
+      }
+      .typewriter {
+        font-size: 1rem;
+      }
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
-
-</style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "RishiBot AI Assistant",
-  "applicationCategory": "Cybersecurity Chat Assistant",
-  "operatingSystem": "Web",
-  "description": "RishiBot is an AI assistant built into Rishi Black's cybersecurity portfolio. It answers cybersecurity, Linux, and ethical hacking questions based on user input.",
-  "author": {
-    "@type": "Person",
-    "name": "Rishi Black"
-  }
-}
-</script>
+  </style>
 </head>
 <body>
-  
-  <nav>
-    <div><strong>Rishi Black</strong></div>
-    <div>
-      <a href="#home"><i class="fas fa-house"></i>Home</a>
-      <a href="#about"><i class="fas fa-user"></i>About</a>
-      <a href="#contact"><i class="fas fa-envelope"></i>Contact</a>
-      <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
-    </div>
-  </nav>
-
-  <header id="home">
-  <div class="background-slider"></div>
-  <div style="background: rgba(0, 0, 0, 0.7); padding: 3rem; border-radius: 20px; z-index: 1; text-align: center; box-shadow: 0 0 20px var(--primary-color);">
-    <h1 class="glitch" style="font-size: 4.5rem; text-transform: uppercase; letter-spacing: 2px;">Rishi Black</h1>
-    <p class="typewriter" style="font-size: 1.5rem; margin-top: 1rem;">Cybersecurity Enthusiast | Ethical Hacker | Python &amp; C++ Programmer</p>
-    <a href="#about" style="display: inline-block; margin-top: 2rem; padding: 0.75rem 2rem; background-color: var(--primary-color); color: var(--bg-color); font-weight: bold; border-radius: 5px; text-decoration: none; transition: 0.3s;">Explore More</a>
-  </div>
-</header>
-
-
-  <section id="about" style="padding: 4rem 2rem; max-width: 1000px; margin: auto;">
-    <h2 style="color: var(--primary-color); font-size: 2.2rem; border-left: 4px solid var(--primary-color); padding-left: 1rem;">About Me</h2>
-    <p style="margin-top: 1rem; font-size: 1.1rem;">
-      I'm a passionate cybersecurity learner who loves exploring network vulnerabilities, ethical hacking, and bug bounty hunting. With a solid foundation in C++ and Python, I have built demo tools and projects to simulate real-world attack scenarios and mitigation strategies. In 2024, I completed a freelance internship working on penetration testing assignments and simulated phishing awareness training. My goal is to contribute to digital security while constantly improving my own skill set.
-    </p>
-  </section>
-
-  <section id="contact" style="padding: 4rem 2rem; max-width: 1000px; margin: auto;">
-    <h2 style="color: var(--primary-color); font-size: 2.2rem; border-left: 4px solid var(--primary-color); padding-left: 1rem;">Contact Me</h2>
-    <form action="#" style="display: flex; flex-direction: column;">
-      <input type="text" placeholder="Your Name" required style="padding: 0.8rem; margin-bottom: 1rem; border-radius: 5px; background-color: var(--input-bg); color: var(--text-color); border: none;">
-      <input type="email" placeholder="Your Email" required style="padding: 0.8rem; margin-bottom: 1rem; border-radius: 5px; background-color: var(--input-bg); color: var(--text-color); border: none;">
-      <textarea placeholder="Your Message" rows="6" required style="padding: 0.8rem; margin-bottom: 1rem; border-radius: 5px; background-color: var(--input-bg); color: var(--text-color); border: none;"></textarea>
-      <button type="submit" style="padding: 0.8rem; background-color: var(--primary-color); border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">Send Message</button>
-    </form>
-  </section>
-
-  <section id="projects" style="padding: 4rem 2rem; max-width: 1000px; margin: auto;">
-    <h2 style="color: var(--primary-color); font-size: 2.2rem; border-left: 4px solid var(--primary-color); padding-left: 1rem;">Projects</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
-      <div style="background-color: var(--accent-color); padding: 1rem; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);">
-        <h3 style="color: var(--primary-color);">Vulnerability Scanner</h3>
-        <p>A Python tool that scans for open ports and common CVEs. Simulates vulnerability discovery and alerts.</p>
-      </div>
-      <div style="background-color: var(--accent-color); padding: 1rem; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);">
-        <h3 style="color: var(--primary-color);">Phishing Simulation</h3>
-        <p>Built a phishing simulation for internal security training using custom email templates and tracking links.</p>
-      </div>
-      <div style="background-color: var(--accent-color); padding: 1rem; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);">
-        <h3 style="color: var(--primary-color);">Bug Bounty Report</h3>
-        <p>Reported and documented XSS vulnerability on a demo site, providing steps to reproduce and mitigation advice.</p>
-      </div>
-    </div>
-  </section>
-
-<section id="skills" style="padding: 4rem 2rem; max-width: 1000px; margin: auto;">
-  <h2 style="color: var(--primary-color); font-size: 2.2rem; border-left: 4px solid var(--primary-color); padding-left: 1rem;">Skills</h2>
-  <div style="margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
-    <div style="background: var(--accent-color); padding: 1rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,255,204,0.1);">
-      <h3 style="color: var(--primary-color);">Python</h3>
-      <div style="background: #333; border-radius: 5px; overflow: hidden;">
-        <div style="width: 90%; background: var(--primary-color); height: 10px;"></div>
-      </div>
-    </div>
-    <div style="background: var(--accent-color); padding: 1rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,255,204,0.1);">
-      <h3 style="color: var(--primary-color);">C++</h3>
-      <div style="background: #333; border-radius: 5px; overflow: hidden;">
-        <div style="width: 80%; background: var(--primary-color); height: 10px;"></div>
-      </div>
-    </div>
-    <div style="background: var(--accent-color); padding: 1rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,255,204,0.1);">
-      <h3 style="color: var(--primary-color);">Linux</h3>
-      <div style="background: #333; border-radius: 5px; overflow: hidden;">
-        <div style="width: 85%; background: var(--primary-color); height: 10px;"></div>
-      </div>
-    </div>
-    <div style="background: var(--accent-color); padding: 1rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,255,204,0.1);">
-      <h3 style="color: var(--primary-color);">Burp Suite</h3>
-      <div style="background: #333; border-radius: 5px; overflow: hidden;">
-        <div style="width: 75%; background: var(--primary-color); height: 10px;"></div>
-      </div>
-    </div>
-    <div style="background: var(--accent-color); padding: 1rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,255,204,0.1);">
-      <h3 style="color: var(--primary-color);">Nmap</h3>
-      <div style="background: #333; border-radius: 5px; overflow: hidden;">
-        <div style="width: 85%; background: var(--primary-color); height: 10px;"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="blog" style="padding: 4rem 2rem; max-width: 1000px; margin: auto;">
-  <h2 style="color: var(--primary-color); font-size: 2.2rem; border-left: 4px solid var(--primary-color); padding-left: 1rem;">Blog</h2>
-  <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 2rem;">
-    <article style="background-color: var(--accent-color); padding: 1.5rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 255, 204, 0.1);">
-      <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Understanding SQL Injection Attacks</h3>
-      <p style="font-size: 1rem;">Learn the basics of SQL Injection, how attackers exploit it, and how you can defend your applications with parameterized queries and proper validation techniques.</p>
-      <a href="#" style="margin-top: 1rem; display: inline-block; color: var(--primary-color); text-decoration: underline;">Read More</a>
-    </article>
-
-    <article style="background-color: var(--accent-color); padding: 1.5rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 255, 204, 0.1);">
-      <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Top 5 Linux Commands Every Hacker Should Know</h3>
-      <p style="font-size: 1rem;">Explore essential Linux commands used in penetration testing, file enumeration, privilege escalation, and more.</p>
-      <a href="#" style="margin-top: 1rem; display: inline-block; color: var(--primary-color); text-decoration: underline;">Read More</a>
-    </article>
-
-    <article style="background-color: var(--accent-color); padding: 1.5rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 255, 204, 0.1);">
-      <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Why Bug Bounty is the Future of Cybersecurity</h3>
-      <p style="font-size: 1rem;">Discover how ethical hackers are transforming security, building careers, and collaborating with companies to report and fix vulnerabilities.</p>
-      <a href="#" style="margin-top: 1rem; display: inline-block; color: var(--primary-color); text-decoration: underline;">Read More</a>
-    </article>
-
-    <article style="background-color: var(--accent-color); padding: 1.5rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 255, 204, 0.1);">
-      <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Book Review: Linux Basics for Hackers</h3>
-      <p style="font-size: 1rem;">"Linux Basics for Hackers" by OccupyTheWeb is a must-read for aspiring hackers. It covers essential Linux skills, command-line tools, and practical hacking tasks to help build a strong foundation in ethical hacking.</p>
-      <a href="https://www.nostarch.com/linuxbasicsforhackers" target="_blank" style="margin-top: 1rem; display: inline-block; color: var(--primary-color); text-decoration: underline;">Check the Book</a>
-    </article>
-  </div>
-</section>
-
-  <section id="social" style="padding: 4rem 2rem; text-align: center;">
-    <h2 style="color: var(--primary-color); font-size: 2.2rem; margin-bottom: 1rem;">Connect With Me</h2>
-    <div style="font-size: 2rem;">
-      <a href="https://github.com/yourhandle" target="_blank" style="margin: 0 1rem; color: var(--primary-color);"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank" style="margin: 0 1rem; color: var(--primary-color);"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:youremail@example.com" style="margin: 0 1rem; color: var(--primary-color);"><i class="fas fa-envelope"></i></a>
-    </div>
-  </section>
-
-  <footer style="text-align: center; padding: 1rem; background-color: var(--accent-color); font-size: 0.9rem; color: #888;">
-    &copy; 2025 Rishi Black | All Rights Reserved
-  </footer>
-<script>
-  const themes = ["dark", "light", "matrix"];
-  let currentTheme = 0;
-
-  function toggleTheme() {
-    currentTheme = (currentTheme + 1) % themes.length;
-    document.documentElement.setAttribute("data-theme", themes[currentTheme]);
-  }
-
-  // Set initial theme
-  document.documentElement.setAttribute("data-theme", themes[currentTheme]);
-
-
-</script>
-
-<section id="ai-chatbot" style="position: fixed; bottom: 20px; right: 20px; width: 300px; max-height: 400px; background-color: var(--accent-color); color: var(--text-color); border-radius: 10px; box-shadow: 0 0 10px rgba(0,255,204,0.3); overflow: hidden; display: flex; flex-direction: column;">
-  <div style="background-color: var(--primary-color); padding: 0.5rem; text-align: center; font-weight: bold;">Rishi AI</div>
-  <div id="chat-window" style="flex: 1; padding: 0.5rem; overflow-y: auto; font-size: 0.9rem;"></div>
-  <form id="chat-form" style="display: flex;">
-    <input id="chat-input" type="text" placeholder="Ask me..." style="flex: 1; padding: 0.5rem; border: none; background-color: var(--input-bg); color: var(--text-color);" />
-    <button type="submit" style="padding: 0.5rem 1rem; background-color: var(--primary-color); border: none; cursor: pointer;">Send</button>
-  </form>
-</section>
-<script>
-const chatForm = document.getElementById("chat-form");
-const chatInput = document.getElementById("chat-input");
-const chatWindow = document.getElementById("chat-window");
-
-const responses = {
-  "hi": "Hello! How can I help you today?",
-  "how are you": "I'm just code, but always running smoothly! How can I assist with cybersecurity today?",
-  "what is cybersecurity": "Cybersecurity is the practice of protecting systems, networks, and data from digital attacks. It includes areas like network security, application security, and information security.",
-  "how can you help me": "I can answer questions about cybersecurity, Linux tools, ethical hacking, and suggest resources to learn more." ,
-  "what is kali linux": "Kali Linux is a Debian-based Linux distribution used by penetration testers and ethical hackers. It comes pre-installed with hundreds of tools for network analysis, web exploitation, password cracking, and more.",
-  "linux vs windows for hacking": "Hackers prefer Linux because it is open-source, highly customizable, and most hacking tools are built for it. Windows hides many internals, making it harder to understand and manipulate.",
-  "best linux commands for beginners": "Some essential Linux commands for beginners include: pwd (print working directory), cd (change directory), ls (list contents), cp (copy), mv (move), rm (remove), and man (manual pages).",
-  "how to setup kali on virtualbox": "Download Kali ISO from kali.org, then create a new virtual machine in VirtualBox. Set RAM (2GB+), create a virtual hard disk (20GB+), and boot the VM with the Kali ISO to begin installation.",
-  "how to stay anonymous online": "Use the Tor network for anonymous browsing, combine with proxy chains or VPNs. Kali Linux also offers tools to mask your MAC address and spoof identity.",
-  "bash scripting for hackers": "Bash scripts automate tasks like scanning ports, managing logs, or launching exploits. Learn variables, loops, user input, and file operations to build hacking automation tools.",
-  "python for cybersecurity": "Python is widely used to write exploits, automation tools, and network scanners. Learn modules like socket, requests, scapy, and build tools like password crackers or TCP clients.",
-  "hello": "Hi there! I’m RishiBot. Ask me anything about cybersecurity.",
-  "what is sql injection": "SQL Injection is a code injection technique that allows attackers to interfere with queries that an application makes to its database.",
-  "how to become a hacker": "Start by learning networking concepts, Linux basics, scripting in Python, and ethical hacking techniques. Practice with tools like Wireshark, Metasploit, and Nmap.",
-  "bye": "Goodbye! Stay safe and secure.",
-  "what is phishing": "Phishing is a social engineering attack often used to steal user data, including login credentials and credit card numbers, by masquerading as a trusted entity.",
-  "top cyber threats": "Some top threats include ransomware, phishing, DDoS attacks, insider threats, and zero-day vulnerabilities.",
-  "what is penetration testing": "Penetration testing is a simulated cyber attack against your system to check for exploitable vulnerabilities.",
-  "tools for bug bounty": "Common tools include Burp Suite, Nmap, Nikto, SQLmap, OWASP ZAP, and custom scripts written in Python.",
-  "what is firewall": "A firewall is a network security device that monitors and filters incoming and outgoing network traffic based on an organization’s previously established security policies.",
-  "what is encryption": "Encryption is the method by which information is converted into secret code that hides the information’s true meaning.",
-  "how to stay safe online": "Use strong passwords, enable two-factor authentication, avoid suspicious links, and keep your software updated.",
-  "what is ransomware": "Ransomware is a type of malware that encrypts the victim's files and demands a ransom payment to restore access.",
-  "what is social engineering": "Social engineering is the psychological manipulation of people into performing actions or divulging confidential information."
-};
-
-chatForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const input = chatInput.value.toLowerCase();
-  if (!input) return;
-  chatWindow.innerHTML += `<div><strong>You:</strong> ${input}</div>`;
-  const reply = responses[input] || "Sorry, I’m still learning. Try asking about cybersecurity basics.";
-  chatWindow.innerHTML += `<div><strong>RishiBot:</strong> ${reply}</div>`;
-  chatWindow.scrollTop = chatWindow.scrollHeight;
-  chatInput.value = "";
-});
-</script>
-
-
-
-<!-- Live Visitor Counter (Mock) -->
-<div style="position: fixed; bottom: 10px; left: 10px; background-color: var(--accent-color); color: var(--primary-color); padding: 0.4rem 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: bold; box-shadow: 0 0 10px rgba(0,255,204,0.4);">
-  👀 Visitors Online: <span id="visitor-count">1</span>
-</div>
-
-<script>
-  // Simulate live visitor counter
-  const visitorCount = document.getElementById("visitor-count");
-  setInterval(() => {
-    const randomVisitors = Math.floor(Math.random() * 5) + 1;
-    visitorCount.textContent = randomVisitors;
-  }, 5000);
-</script>
-
-</body>
-</html>
-
+<!-- CONTENT CONTINUES HERE -->
